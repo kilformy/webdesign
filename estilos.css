@@ -12,7 +12,7 @@ body {
 
 body::before {
     content: "";
-    background-image: url('logotipo-soldadura.jpg'); 
+    background-image: url(''); 
     position: fixed;
     top: 0;
     left: 0;
