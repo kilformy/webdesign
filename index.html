@@ -1,68 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <title>cerrajeria henrys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrajería Henrys</title>
     <link rel="stylesheet" href="estilos.css">
+
 </head>
 
 <body>
-    <h1>CERRAJERIA hennrys</h1>
-    <h1>BIENVENIDO</h1>
-    <h2>formulario de cliente</h2>
-    <br>
     <form action="recibido.html">
-        <label for="nombre">nombre:</label>
-        <input class="inputs" id="nombre" required="nombre" type="text" name="nombre">
-        <br>
-        <br>
-        <label for="apellido">apellido:</label>
-        <input id="apellido" required id="apellido" type="text" name="apellido">
-        <required></required>
-        <br>
-        <hr>
-        <p>sexo:</p>
+        <h1>Cerrajería Henrys</h1>
+        <h1>Bienvenido</h1>
+        <h2>Formulario de Cliente</h2>
+        <label for="nombre">Nombre:</label>
+        <input class="inputs" id="nombre" required type="text" name="nombre">
 
-        <select id="sexo" required id="" name="sexo" size="1">
-            <option value="femenino">femenino</option>
-            <option value="masculino">masculino</option>
-        </select>
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" required type="text" name="apellido">
+
         <hr>
-        <p>tipo de documento</p>
-        <select id="documento" name="documento" size="1">
+        <p>Sexo:</p>
+        <select id="sexo" required name="sexo">
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select>
+
+        <hr>
+        <p>Tipo de documento:</p>
+        <select id="documento" name="documento">
             <option value="CC">CC</option>
-            <br>
             <option value="TI">TI</option>
-            <br><br>
             <option value="CE">CE</option>
-            <input id="Tipo de documento" required id="tipo de docuemento" type="text" name="Tipo de documento">
-            <br>
         </select>
-        <hr>
-        <p>fecha de nacimiento:</p>
-        <input type="date" required id="date">
-        <br>
-        <hr>
-        <br>
-        <br>
-        <p>COMENTARIOS:</p>
-        <textarea required id="" name="opiniones" rows="4" cols="20">
+        <input id="tipoDocumento" required type="text" name="TipoDeDocumento">
 
-
-            </textarea>
-        <br>
-        <p>LLENAR ESTE FORMULARIO AYUDA PARA UNA MEJOR SEGURIDAD Y CONFIANZA PARA EL CLIENTE</p>
-        <br>
-        <br>
         <hr>
-        <a href="pagina_pricipal.html" class="boton_enviar">enviar</a>
-        </a>
-        <br>
-        <br>
-         <br>
-         <br>
-         <br>
+        <p>Fecha de nacimiento:</p>
+        <input type="date" required id="fechaNacimiento" name="fechaNacimiento">
+
+        <hr>
+        <p>Comentarios:</p>
+        <textarea required name="opiniones" rows="4" cols="20"></textarea>
+
+        <p>Llenar este formulario ayuda para una mejor seguridad y confianza para el cliente</p>
+
+        <hr>
+        <a href="#top" class="boton_enviar">Enviar</a>
     </form>
-  
+
+    <script>
+        // Scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            let botonEnviar = document.querySelector(".boton_enviar");
+            botonEnviar.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
 
 </html>
