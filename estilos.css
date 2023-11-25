@@ -2,22 +2,18 @@ body {
     background-color: lightgrey;
     color: rgb(10, 10, 10);
     font-family: Georgia;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    margin: 0; 
-    overflow: hidden; 
 }
 
-body::before {
-    content: "";
-    background-image: url('logotipo-soldadura.jpg'); 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    z-index: -1;
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightgrey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
@@ -25,27 +21,122 @@ h1 {
     font-family: fantasy;
 }
 
-div {
-    color: rgb(10, 10, 10);
-    margin: auto; 
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-h2 {
-    text-align: center;
+input, select, textarea {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 select {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
+    width: calc(85% + 2px); 
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+p {
+    font-weight: bold;
 }
 
 .boton_enviar {
-    background-color: gray;
+    display: inline-block;
     padding: 10px 20px;
+    font-size: 16px;
     text-decoration: none;
-    color: white; 
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
+
+.boton_enviar:hover {
+    background-color: #45a049;
+}
+
+.efecto{
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    opacity: .3;
+  
+    position: absolute;
+    bottom: -150vh;
+  
+    animation: efectos 6s linear infinite;
+  }
+  
+  .efecto:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+  
+  .efecto:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 6s;
+  }
+  
+  .efecto:nth-child(3){
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+  }
+  
+  .efecto:nth-child(4){
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    animation-duration: 6s;
+    animation-delay: 5s;
+  }
+  
+  .efecto:nth-child(5){
+    width: 80px;
+    height: 80px;
+    left: 85%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }
+  
+  @keyframes efectos {
+    0%{
+      bottom: 0;
+      opacity: 0;
+    }
+    30%{
+      transform: translate(30px);
+    }
+    50%{
+      opacity: .2;
+    }
+    100%{
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
