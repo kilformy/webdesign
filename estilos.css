@@ -133,7 +133,7 @@ p {
       transform: translate(30px);
     }
     50%{
-      opacity: .4;
+      opacity: .5;
     }
     100%{
       bottom: 100vh;
