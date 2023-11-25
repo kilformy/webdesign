@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="recibido.html">
+    <form id="miFormulario">
         <h1>Cerrajería Henrys</h1>
         <h1>Bienvenido</h1>
         <h2>Formulario de Cliente</h2>
@@ -47,15 +47,18 @@
         <p>Llenar este formulario ayuda para una mejor seguridad y confianza para el cliente</p>
 
         <hr>
-        <a href="#top" class="boton_enviar">Enviar</a>
+        <button type="submit" class="boton_enviar">Enviar</button>
     </form>
 
     <script>
         // Scroll
         document.addEventListener("DOMContentLoaded", function () {
-            let botonEnviar = document.querySelector(".boton_enviar");
-            botonEnviar.addEventListener("click", function () {
+            let formulario = document.getElementById("miFormulario");
+            formulario.addEventListener("submit", function (event) {
+                event.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                window.location.href = "index.html";
             });
         });
     </script>
