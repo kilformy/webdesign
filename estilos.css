@@ -72,3 +72,71 @@ p {
 .boton_enviar:hover {
     background-color: #45a049;
 }
+
+.efecto{
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    opacity: .3;
+  
+    position: absolute;
+    bottom: -150vh;
+  
+    animation: efectos 6s linear infinite;
+  }
+  
+  .efecto:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+  
+  .efecto:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 6s;
+  }
+  
+  .efecto:nth-child(3){
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+  }
+  
+  .efecto:nth-child(4){
+    width: 70px;
+    height: 70px;
+    left: 75%;
+    animation-duration: 6s;
+    animation-delay: 5s;
+  }
+  
+  .efecto:nth-child(5){
+    width: 80px;
+    height: 80px;
+    left: 85%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }
+  
+  @keyframes efectos {
+    0%{
+      bottom: 0;
+      opacity: 0;
+    }
+    30%{
+      transform: translate(30px);
+    }
+    50%{
+      opacity: .2;
+    }
+    100%{
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
