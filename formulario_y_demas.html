@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrajería Henrys</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <form action="recibido.html">
+        <h1>Cerrajería Henrys</h1>
+        <h1>Bienvenido</h1>
+        <h2>Formulario de Cliente</h2>
+        <label for="nombre">Nombre:</label>
+        <input class="inputs" id="nombre" required type="text" name="nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" required type="text" name="apellido">
+
+        <hr>
+        <p>Sexo:</p>
+        <select id="sexo" required name="sexo">
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select>
+
+        <hr>
+        <p>Tipo de documento:</p>
+        <select id="documento" name="documento">
+            <option value="CC">CC</option>
+            <option value="TI">TI</option>
+            <option value="CE">CE</option>
+        </select>
+        <input id="tipoDocumento" required type="text" name="TipoDeDocumento">
+
+        <hr>
+        <p>Fecha de nacimiento:</p>
+        <input type="date" required id="fechaNacimiento" name="fechaNacimiento">
+
+        <hr>
+        <p>Comentarios:</p>
+        <textarea required name="opiniones" rows="4" cols="20"></textarea>
+
+        <p>Llenar este formulario ayuda para una mejor seguridad y confianza para el cliente</p>
+
+        <hr>
+        <a href="#top" class="boton_enviar">Enviar</a>
+    </form>
+
+    <script>
+        // Scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            let botonEnviar = document.querySelector(".boton_enviar");
+            botonEnviar.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
