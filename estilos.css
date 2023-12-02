@@ -140,3 +140,9 @@ p {
       opacity: 0;
     }
   }
+
+  .footer_social{
+    color: blue
+    padding: 5px;
+    font-size: 40px;
+  }
